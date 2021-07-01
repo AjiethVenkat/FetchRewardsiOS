@@ -7,29 +7,40 @@
 
 import UIKit
 
-struct APIResponse: Decodable {
-    let events: [Events]
+struct APIResponse: Codable {
+    var events: [Events]
 }
 
-struct Events: Decodable {
-    let id : Int
-    let type : String
+struct Events: Codable {
+    var id : Int
+    var title : String
+    var datetime_utc: String
+    var performers: [Performers]
+    
+    struct Performers: Codable {
+        var image: String
+    }
 }
+
+
 
 
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var names:[Events] = []
+    var names = [Events]()
+  
     let urlString = "https://api.seatgeek.com/2/events?client_id=MjIzOTQyMjZ8MTYyNTAwOTg1OS42MDc3MjE2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        fetchData()
     }
 
     func fetchData(){
@@ -43,13 +54,15 @@ class ViewController: UIViewController {
             }
             do{
                 let jsonResult = try JSONDecoder().decode(APIResponse.self, from:data)
-                print("jsonResult",jsonResult)
+                print("jsonResult",jsonResult.events)
                 DispatchQueue.main.async {
                     self.names = jsonResult.events
+                    self.tableView.reloadData()
                 }
             }catch{
                 print(error)
             }
+          
         }
         task.resume()
     }
@@ -69,10 +82,15 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
         
-        cell.textLabel?.text = names[indexPath.row].type
-        return cell
+        let customCell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier) as! MyTableViewCell
+        
+        customCell.configure(with: names[indexPath.row].title, imageName: names[indexPath.row].performers[0].image, dateString: names[indexPath.row].datetime_utc)
+      //  let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
+        
+      //  cell.textLabel?.text = names[indexPath.row].type
+       // cell.textLabel?.text = "\(names[indexPath.row].id)"
+        return customCell
     }
 }
 

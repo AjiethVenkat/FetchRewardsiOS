@@ -15,6 +15,8 @@
 		C913917A268BED990074F2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9139178268BED990074F2CB /* LaunchScreen.storyboard */; };
 		C9139185268BED9A0074F2CB /* FetchRewardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139184268BED9A0074F2CB /* FetchRewardsTests.swift */; };
 		C9139190268BED9A0074F2CB /* FetchRewardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913918F268BED9A0074F2CB /* FetchRewardsUITests.swift */; };
+		C913919F268D37670074F2CB /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913919D268D37670074F2CB /* MyTableViewCell.swift */; };
+		C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C913919E268D37670074F2CB /* MyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C913918B268BED9A0074F2CB /* FetchRewardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRewardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C913918F268BED9A0074F2CB /* FetchRewardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRewardsUITests.swift; sourceTree = "<group>"; };
 		C9139191268BED9A0074F2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C913919D268D37670074F2CB /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		C913919E268D37670074F2CB /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				C9139176268BED990074F2CB /* Assets.xcassets */,
 				C9139178268BED990074F2CB /* LaunchScreen.storyboard */,
 				C913917B268BED990074F2CB /* Info.plist */,
+				C913919D268D37670074F2CB /* MyTableViewCell.swift */,
+				C913919E268D37670074F2CB /* MyTableViewCell.xib */,
 			);
 			path = FetchRewards;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C913917A268BED990074F2CB /* LaunchScreen.storyboard in Resources */,
+				C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */,
 				C9139177268BED990074F2CB /* Assets.xcassets in Resources */,
 				C9139175268BED950074F2CB /* Main.storyboard in Resources */,
 			);
@@ -259,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9139172268BED950074F2CB /* ViewController.swift in Sources */,
+				C913919F268D37670074F2CB /* MyTableViewCell.swift in Sources */,
 				C913916E268BED950074F2CB /* AppDelegate.swift in Sources */,
 				C9139170268BED950074F2CB /* SceneDelegate.swift in Sources */,
 			);
