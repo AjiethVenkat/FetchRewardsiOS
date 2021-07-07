@@ -17,6 +17,8 @@
 		C9139190268BED9A0074F2CB /* FetchRewardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913918F268BED9A0074F2CB /* FetchRewardsUITests.swift */; };
 		C913919F268D37670074F2CB /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913919D268D37670074F2CB /* MyTableViewCell.swift */; };
 		C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C913919E268D37670074F2CB /* MyTableViewCell.xib */; };
+		C91391A326951B040074F2CB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91391A126951B030074F2CB /* DetailViewController.swift */; };
+		C91391A426951B040074F2CB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91391A226951B040074F2CB /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		C9139191268BED9A0074F2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C913919D268D37670074F2CB /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C913919E268D37670074F2CB /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		C91391A126951B030074F2CB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C91391A226951B040074F2CB /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				C913917B268BED990074F2CB /* Info.plist */,
 				C913919D268D37670074F2CB /* MyTableViewCell.swift */,
 				C913919E268D37670074F2CB /* MyTableViewCell.xib */,
+				C91391A126951B030074F2CB /* DetailViewController.swift */,
+				C91391A226951B040074F2CB /* DetailViewController.xib */,
 			);
 			path = FetchRewards;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 			files = (
 				C913917A268BED990074F2CB /* LaunchScreen.storyboard in Resources */,
 				C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */,
+				C91391A426951B040074F2CB /* DetailViewController.xib in Resources */,
 				C9139177268BED990074F2CB /* Assets.xcassets in Resources */,
 				C9139175268BED950074F2CB /* Main.storyboard in Resources */,
 			);
@@ -267,6 +274,7 @@
 			files = (
 				C9139172268BED950074F2CB /* ViewController.swift in Sources */,
 				C913919F268D37670074F2CB /* MyTableViewCell.swift in Sources */,
+				C91391A326951B040074F2CB /* DetailViewController.swift in Sources */,
 				C913916E268BED950074F2CB /* AppDelegate.swift in Sources */,
 				C9139170268BED950074F2CB /* SceneDelegate.swift in Sources */,
 			);

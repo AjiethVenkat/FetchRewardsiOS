@@ -25,26 +25,43 @@ struct Events: Codable {
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet var tableView: UITableView!
     
     var names = [Events]()
+    
+    let searchbar = UISearchBar()
   
     let urlString = "https://api.seatgeek.com/2/events?client_id=MjIzOTQyMjZ8MTYyNTAwOTg1OS42MDc3MjE2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        searchbar.delegate = self
+        view.addSubview(searchbar)
         
         tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        fetchData()
+     //   fetchData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        searchbar.frame = CGRect(x: 10, y: view.safeAreaInsets.top, width: view.frame.width - 20, height:50)
+        tableView?.frame = CGRect(x: 0, y: view.safeAreaInsets.top + 55, width: view.frame.width, height: view.frame.height - 55)
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchbar.resignFirstResponder()
+        if let text = searchbar.text{
+            names = []
+            self.tableView?.reloadData()
+            fetchData(query: text)
+        }
     }
 
-    func fetchData(){
-        guard let url = URL(string: urlString) else {
+    func fetchData(query: String){
+        guard let url = URL(string: "https://api.seatgeek.com/2/events?taxonomies.name=\(query)&client_id=MjIzOTQyMjZ8MTYyNTAwOTg1OS42MDc3MjE2") else {
             return
         }
         
@@ -72,6 +89,11 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell number", indexPath)
+        let details = names[indexPath.row].title
+        
+        let vc = DetailViewController(items: details)
+       // vc.title = details.title
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
