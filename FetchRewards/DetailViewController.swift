@@ -7,13 +7,17 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController{
+    
     
     @IBOutlet weak var myLabel : UILabel!
-    private var items =  ""
+    @IBOutlet weak var myImageLarge : UIImageView!
+    private var items : String
+    private var imageURL: String
     
-    init(items: String){
+    init(items: String, image: String){
         self.items = items
+        self.imageURL = image
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,11 +28,16 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .gray
         myLabel.text = items
+        myImageLarge.loadImage(url:URL(string: imageURL)!)
         // Do any additional setup after loading the view.
     }
 
 
+
+    
+     
     /*
     // MARK: - Navigation
 
@@ -39,4 +48,19 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
+
+
+extension UIImageView {
+    func loadImage(url: URL){
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data){
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }

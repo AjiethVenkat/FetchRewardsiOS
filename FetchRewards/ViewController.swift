@@ -45,6 +45,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         tableView.delegate = self
         tableView.dataSource = self
      //   fetchData()
+        fetchDataFirstTime()
     }
     
     override func viewDidLayoutSubviews() {
@@ -65,7 +66,32 @@ class ViewController: UIViewController, UISearchBarDelegate {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, _ , error in
+        let task = URLSession.shared.dataTask(with:  url ) { data, _ , error in
+            guard let data = data , error == nil else {
+                return
+            }
+            do{
+                let jsonResult = try JSONDecoder().decode(APIResponse.self, from:data)
+                print("jsonResult",jsonResult.events)
+                DispatchQueue.main.async {
+                    self.names = jsonResult.events
+                    self.tableView.reloadData()
+                }
+            }catch{
+                print(error)
+            }
+          
+        }
+        task.resume()
+    }
+    
+    
+    func fetchDataFirstTime(){
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with:  url ) { data, _ , error in
             guard let data = data , error == nil else {
                 return
             }
@@ -84,16 +110,20 @@ class ViewController: UIViewController, UISearchBarDelegate {
         task.resume()
     }
 
+
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell number", indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
         let details = names[indexPath.row].title
+        let imageURL = names[indexPath.row].performers[0].image
         
-        let vc = DetailViewController(items: details)
-       // vc.title = details.title
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = DetailViewController(items: details, image: imageURL)
+       // self.navigationController?.pushViewController(vc, animated: true)
+       // show(vc, sender: self)
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
