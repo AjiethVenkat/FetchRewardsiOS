@@ -11,7 +11,7 @@
 		C9139170268BED950074F2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913916F268BED950074F2CB /* SceneDelegate.swift */; };
 		C9139172268BED950074F2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139171268BED950074F2CB /* ViewController.swift */; };
 		C9139175268BED950074F2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9139173268BED950074F2CB /* Main.storyboard */; };
-		C9139177268BED990074F2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9139176268BED990074F2CB /* Assets.xcassets */; };
+		C9139177268BED990074F2CB /* Assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9139176268BED990074F2CB /* Assests.xcassets */; };
 		C913917A268BED990074F2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9139178268BED990074F2CB /* LaunchScreen.storyboard */; };
 		C9139185268BED9A0074F2CB /* FetchRewardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139184268BED9A0074F2CB /* FetchRewardsTests.swift */; };
 		C9139190268BED9A0074F2CB /* FetchRewardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913918F268BED9A0074F2CB /* FetchRewardsUITests.swift */; };
@@ -19,6 +19,7 @@
 		C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C913919E268D37670074F2CB /* MyTableViewCell.xib */; };
 		C91391A326951B040074F2CB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91391A126951B030074F2CB /* DetailViewController.swift */; };
 		C91391A426951B040074F2CB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91391A226951B040074F2CB /* DetailViewController.xib */; };
+		C92972032696967A0036B93C /* FavoriteID.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C92972012696967A0036B93C /* FavoriteID.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		C913916F268BED950074F2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C9139171268BED950074F2CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9139174268BED950074F2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C9139176268BED990074F2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9139176268BED990074F2CB /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assests.xcassets; sourceTree = "<group>"; };
 		C9139179268BED990074F2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C913917B268BED990074F2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9139180268BED9A0074F2CB /* FetchRewardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRewardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +58,7 @@
 		C913919E268D37670074F2CB /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C91391A126951B030074F2CB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C91391A226951B040074F2CB /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C92972022696967A0036B93C /* FavoriteID.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteID.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +113,14 @@
 				C913916F268BED950074F2CB /* SceneDelegate.swift */,
 				C9139171268BED950074F2CB /* ViewController.swift */,
 				C9139173268BED950074F2CB /* Main.storyboard */,
-				C9139176268BED990074F2CB /* Assets.xcassets */,
+				C9139176268BED990074F2CB /* Assests.xcassets */,
 				C9139178268BED990074F2CB /* LaunchScreen.storyboard */,
 				C913917B268BED990074F2CB /* Info.plist */,
 				C913919D268D37670074F2CB /* MyTableViewCell.swift */,
 				C913919E268D37670074F2CB /* MyTableViewCell.xib */,
 				C91391A126951B030074F2CB /* DetailViewController.swift */,
 				C91391A226951B040074F2CB /* DetailViewController.xib */,
+				C92972012696967A0036B93C /* FavoriteID.xcdatamodeld */,
 			);
 			path = FetchRewards;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 				C913917A268BED990074F2CB /* LaunchScreen.storyboard in Resources */,
 				C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */,
 				C91391A426951B040074F2CB /* DetailViewController.xib in Resources */,
-				C9139177268BED990074F2CB /* Assets.xcassets in Resources */,
+				C9139177268BED990074F2CB /* Assests.xcassets in Resources */,
 				C9139175268BED950074F2CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +279,7 @@
 				C913919F268D37670074F2CB /* MyTableViewCell.swift in Sources */,
 				C91391A326951B040074F2CB /* DetailViewController.swift in Sources */,
 				C913916E268BED950074F2CB /* AppDelegate.swift in Sources */,
+				C92972032696967A0036B93C /* FavoriteID.xcdatamodeld in Sources */,
 				C9139170268BED950074F2CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +613,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C92972012696967A0036B93C /* FavoriteID.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C92972022696967A0036B93C /* FavoriteID.xcdatamodel */,
+			);
+			currentVersion = C92972022696967A0036B93C /* FavoriteID.xcdatamodel */;
+			path = FavoriteID.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9139162268BED950074F2CB /* Project object */;
 }

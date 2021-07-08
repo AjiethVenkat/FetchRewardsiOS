@@ -10,9 +10,16 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     
     static let identifier = "MyTableViewCell"
+    var link: ViewController?
     
     static func nib() -> UINib {
         return UINib(nibName: "MyTableViewCell", bundle: nil)
+    }
+    
+    @objc private func handleFavorite() {
+        link?.selectedFavorite(cell: self)
+        myFavoriteButton.tintColor = .purple
+        print("Favorite is working")
     }
     
     public func configure(with title: String, imageName: String, dateString:String) {
@@ -25,14 +32,20 @@ class MyTableViewCell: UITableViewCell {
         myDate.text = dateString//utcDateFormatter.date(from: dateString)
      //   myImageView.image = UIImage(systemName: imageName)
         myImageView.load(url: URL(string: imageName)!)
+        let favImage = UIImage(named: "fav.png")
+        myFavoriteButton.setImage(favImage, for: .normal)
+        myFavoriteButton.addTarget(self, action: #selector(handleFavorite), for: .touchUpInside)
     }
 
     @IBOutlet var myImageView: UIImageView!
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myDate: UILabel!
+    @IBOutlet var myFavoriteButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
 

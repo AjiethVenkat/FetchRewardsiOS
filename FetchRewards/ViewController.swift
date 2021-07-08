@@ -31,9 +31,20 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     var names = [Events]()
     
+    var favArray = [String]()
+    
     let searchbar = UISearchBar()
   
     let urlString = "https://api.seatgeek.com/2/events?client_id=MjIzOTQyMjZ8MTYyNTAwOTg1OS42MDc3MjE2"
+    
+    func selectedFavorite(cell: UITableViewCell){
+        let selectedCell = tableView.indexPath(for: cell)
+        print("selectedcell",selectedCell)
+        let title = names[selectedCell!.row].title
+        favArray.append(title)
+        print("title",favArray)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,7 +147,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let customCell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier) as! MyTableViewCell
-        
+        customCell.link = self
         customCell.configure(with: names[indexPath.row].title, imageName: names[indexPath.row].performers[0].image, dateString: names[indexPath.row].datetime_utc)
       //  let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
         
