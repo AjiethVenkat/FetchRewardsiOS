@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FetchRewards
 //
-//  Created by Cibi Balachander on 6/29/21.
+//  Created by AjiethVenkat on 6/29/21.
 //
 
 import UIKit

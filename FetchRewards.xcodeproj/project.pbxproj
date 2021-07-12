@@ -19,7 +19,9 @@
 		C91391A0268D37670074F2CB /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C913919E268D37670074F2CB /* MyTableViewCell.xib */; };
 		C91391A326951B040074F2CB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91391A126951B030074F2CB /* DetailViewController.swift */; };
 		C91391A426951B040074F2CB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91391A226951B040074F2CB /* DetailViewController.xib */; };
-		C92972032696967A0036B93C /* FavoriteID.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C92972012696967A0036B93C /* FavoriteID.xcdatamodeld */; };
+		C929724B26981B3B0036B93C /* FavID.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C929724926981B3B0036B93C /* FavID.xcdatamodeld */; };
+		C929724E26981D7B0036B93C /* FavID+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929724C26981D7B0036B93C /* FavID+CoreDataClass.swift */; };
+		C929724F26981D7B0036B93C /* FavID+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929724D26981D7B0036B93C /* FavID+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		C913919E268D37670074F2CB /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C91391A126951B030074F2CB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C91391A226951B040074F2CB /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		C92972022696967A0036B93C /* FavoriteID.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteID.xcdatamodel; sourceTree = "<group>"; };
+		C929724A26981B3B0036B93C /* FavID.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavID.xcdatamodel; sourceTree = "<group>"; };
+		C929724C26981D7B0036B93C /* FavID+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavID+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C929724D26981D7B0036B93C /* FavID+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavID+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 		C9139161268BED950074F2CB = {
 			isa = PBXGroup;
 			children = (
+				C929724C26981D7B0036B93C /* FavID+CoreDataClass.swift */,
+				C929724D26981D7B0036B93C /* FavID+CoreDataProperties.swift */,
 				C913916C268BED950074F2CB /* FetchRewards */,
 				C9139183268BED9A0074F2CB /* FetchRewardsTests */,
 				C913918E268BED9A0074F2CB /* FetchRewardsUITests */,
@@ -117,10 +123,10 @@
 				C9139178268BED990074F2CB /* LaunchScreen.storyboard */,
 				C913917B268BED990074F2CB /* Info.plist */,
 				C913919D268D37670074F2CB /* MyTableViewCell.swift */,
+				C929724926981B3B0036B93C /* FavID.xcdatamodeld */,
 				C913919E268D37670074F2CB /* MyTableViewCell.xib */,
 				C91391A126951B030074F2CB /* DetailViewController.swift */,
 				C91391A226951B040074F2CB /* DetailViewController.xib */,
-				C92972012696967A0036B93C /* FavoriteID.xcdatamodeld */,
 			);
 			path = FetchRewards;
 			sourceTree = "<group>";
@@ -279,7 +285,9 @@
 				C913919F268D37670074F2CB /* MyTableViewCell.swift in Sources */,
 				C91391A326951B040074F2CB /* DetailViewController.swift in Sources */,
 				C913916E268BED950074F2CB /* AppDelegate.swift in Sources */,
-				C92972032696967A0036B93C /* FavoriteID.xcdatamodeld in Sources */,
+				C929724B26981B3B0036B93C /* FavID.xcdatamodeld in Sources */,
+				C929724E26981D7B0036B93C /* FavID+CoreDataClass.swift in Sources */,
+				C929724F26981D7B0036B93C /* FavID+CoreDataProperties.swift in Sources */,
 				C9139170268BED950074F2CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,13 +623,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C92972012696967A0036B93C /* FavoriteID.xcdatamodeld */ = {
+		C929724926981B3B0036B93C /* FavID.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C92972022696967A0036B93C /* FavoriteID.xcdatamodel */,
+				C929724A26981B3B0036B93C /* FavID.xcdatamodel */,
 			);
-			currentVersion = C92972022696967A0036B93C /* FavoriteID.xcdatamodel */;
-			path = FavoriteID.xcdatamodeld;
+			currentVersion = C929724A26981B3B0036B93C /* FavID.xcdatamodel */;
+			path = FavID.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
